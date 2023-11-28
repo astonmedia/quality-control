@@ -2,8 +2,8 @@
 import Link from "next/link";
 
 type Props = {
-  title: String;
-  href: String;
+  title: string;
+  href: string;
 };
 
 function Button({ title, href }: Props) {
