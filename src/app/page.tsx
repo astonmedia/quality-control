@@ -5,7 +5,7 @@ import { LineChart } from "./components/LineChart";
 import { useState } from "react";
 
 export default function Home() {
-  const [test, setTest] = useState("Leak Test");
+  const [test, setTest] = useState("Strength Test");
   return (
     <main className="">
       <div className="grid grid-cols-10">
@@ -22,14 +22,11 @@ export default function Home() {
                   selectedValue="Ricky Aston"
                 />
                 <Input selection="Current Job" selectedValue="305255" />
-                <Input
-                  selection="Last Test Completed"
-                  selectedValue="Leak Test"
-                />
+                <Input selection="Last Test Completed" selectedValue={test} />
               </div>
             </div>
             <div className="h-1/2 w-3/4 bg-slate-400 mx-auto">
-              <LineChart chartTitle={test} />
+              <LineChart titleText={test} />
             </div>
           </div>
         </div>
