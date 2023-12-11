@@ -1,5 +1,5 @@
 "use client";
-import Input from "./components/Input";
+import Card from "./components/Card";
 import Sidenav from "./components/Sidenav";
 import { LineChart } from "./components/LineChart";
 import { useState } from "react";
@@ -22,17 +22,17 @@ export default function Home() {
           <div className="flex flex-col h-screen justify-between pb-20">
             <div className=" flex flex-col">
               <div className="flex gap-4 justify-between">
-                <Input selection="Selected Machine" selectedValue={machine} />
-                <Input selection="Current Operator" selectedValue={operator} />
-                <Input selection="Current Job" selectedValue={job} />
-                <Input selection="Last Test Completed" selectedValue={test} />
-                <Input selection="Batch Number" selectedValue={batch} />
+                <Card selection="Selected Machine" selectedValue={machine} />
+                <Card selection="Current Operator" selectedValue={operator} />
+                <Card selection="Current Job" selectedValue={job} />
+                <Card selection="Last Test Completed" selectedValue={test} />
+                <Card selection="Batch Number" selectedValue={batch} />
               </div>
-              <div className="flex">
+              {/* <div className="flex">
                 {checks.map((check) => (
                   <p key={check.id}>{check.id}</p>
                 ))}
-              </div>
+              </div> */}
             </div>
             <div className="h-1/2 w-3/4 bg-slate-400 mx-auto">
               <LineChart titleText={test} />
